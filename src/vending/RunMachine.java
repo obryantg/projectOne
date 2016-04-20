@@ -2,7 +2,7 @@ package vending;
 
 import java.util.Scanner;
 
-public class VendingMachine {
+public class RunMachine {
 		
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
