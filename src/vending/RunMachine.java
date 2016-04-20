@@ -1,10 +1,15 @@
 package vending;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class RunMachine {
 		
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to the DNG Vending Machine would here are the items for sale!");
 		ProductIO.readfromFile();
@@ -16,7 +21,12 @@ public class RunMachine {
 		switch (input)
 		{
 			case 1:			
-				System.out.println("this is where the itemDescriptionFile should go");
+				try (BufferedReader br = new BufferedReader(new FileReader("ItemDescriptionFile"))) {
+					   String line = null;
+					   while ((line = br.readLine()) != null) {
+					       System.out.println(line);
+					   }
+					}
 				break;
 		
 		    case 2:
@@ -29,6 +39,11 @@ public class RunMachine {
 		
 		
 		sc.close();
+	}
+
+	private static char[] PrintWriter(String string) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
