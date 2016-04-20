@@ -10,7 +10,7 @@ public class RunMachine {
 		ProductIO.readfromFile();
 		System.out.println("Would you like to learm more about these items(1) or purcahse an item(2)");
 		int input = 0;
-		input = sc.nextInt();
+		input = Validator.getValidInt1(1, 2);
 		sc.nextLine();
 		
 		switch (input)
