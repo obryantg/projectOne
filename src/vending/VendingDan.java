@@ -27,11 +27,12 @@ public class VendingDani {
 	    product [1][7]= 5;
 	    product [1][8]= 5;
 	    
-	}}
+	}
+}
 
 
 		
 	
 
 	
-}
+
