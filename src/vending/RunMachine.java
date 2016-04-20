@@ -16,7 +16,7 @@ public class RunMachine {
 		switch (input)
 		{
 			case 1:			
-				System.out.println("ProductList.txt");
+				System.out.println("this is where the itemDescriptionFile should go");
 				break;
 		
 		    case 2:
