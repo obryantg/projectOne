@@ -38,31 +38,33 @@ public class Validator {
 
             return s;
      }
-	//pick one of the 9 products
-	public static int getValidNumberInRange (int min, int max)
-	{
-		int input = s.nextInt();
-		while (input <1 || input > 9)
-		{
-			System.out.println("Please put a number within range!");
-			input = s.nextInt();
-			s.nextLine();
-		}
-		
-		return input;
-		}
-	//would you like to buy(1) or learn more about an item (2)
-	public static int getValidNumberInRange1 (int min, int max)
-	{
-		int input = s.nextInt();
-		while (input <1 || input > 2)
-		{
-			System.out.println("Please enter either 1 or 2!");
-			input = s.nextInt();
-			s.nextLine();
-		}
-		
-		return input;
-		}	
+	
+	
+public static int readValidInt() {
+	while (!s.hasNextInt()) {
+		s.nextLine();
+		System.out.print("Please make a valid selection! Enter a number: ");
 	}
-
+	int x = s.nextInt();
+	s.nextLine();
+	return x;
+}
+// item selection 9 options
+public static int getValidInt(int min, int max) {
+	int input = readValidInt();
+	while (input < min || input > max) {
+		System.out.print("Please put a number within range! (1-9): ");
+		input = readValidInt();
+	}
+	return input;
+}
+//beginning menu option
+public static int getValidInt1(int min, int max) {
+	int input = readValidInt();
+	while (input < min || input > max) {
+		System.out.print("Please select option number '1' or '2': ");
+		input = readValidInt();
+	}
+	return input;
+}
+}
