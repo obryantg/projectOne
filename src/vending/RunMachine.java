@@ -43,12 +43,12 @@ public class RunMachine {
 					       System.out.println(line);
 					       
 					   }
-					   
+					   break;
 					}				
-				break;
+				
 		
 		    case 2:
-		    	System.out.println("Enter the number of the item you want to purcahse!(0-8)");
+		    	System.out.println("Enter the number of the item you want to purchase!(0-8)");
 		    	input= sc.nextInt();
 		    	sc.nextLine();
 		    	break;

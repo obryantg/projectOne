@@ -25,21 +25,7 @@ public class ProductIO {
 		try {
 			PrintWriter out = new PrintWriter(productFile);
 			out.println(productFile);
-			// + "\n1. Kamel's 'so easy' chews"
-			// + "\n2. Damien's down under suprise"
-			// + "\n3. Kim's 'hyped up' energy bar"
-			// + "\n4. Grand Circus peanuts"
-			// + "\n5. Aaron's Big Dawg Bar"
-			// + "\n6. Broderick Tower Bites"
-			// + "\n7. Greg's Honey Bun"
-			// + "\n8. B'Nastee's Red Hat"
-			// + "\n9. Bubble Gum");
-			//try {
-			//FileWriter out = new FileWriter(productFile,true);
-			//System.out.print("Item List: ");
-			// input = sc.nextLine();
-			//out.append(input + "\n");
-			// System.out.println("Entry Saved");
+			
 
 			out.close();
 
@@ -60,8 +46,8 @@ public class ProductIO {
 		String line = br.readLine();
 		ArrayList<VendingDan> vItems = new ArrayList<>();
 
-		while (br.readLine() != null) {
-			br.readLine();
+		while (line!= null) {
+			
 			String[] items = line.split(",");
 			int count = 0;
 			try {
@@ -70,7 +56,9 @@ public class ProductIO {
 				int itemQuantity = Integer.parseInt(items[2]);
 
 				vItems.add(new VendingDan(itemName, itemPrice, itemQuantity));
-
+				count ++;
+				line= br.readLine();
+				
 			} catch (Exception e) {
 				System.out.println("Bad item in file " + productFile + " on row " + (count + 1) + ".");
 				// while (line !=null)
