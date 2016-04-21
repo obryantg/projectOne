@@ -60,8 +60,8 @@ public class ProductIO {
 		String line = br.readLine();
 		ArrayList<VendingDan> vItems = new ArrayList<>();
 
-		while (br.readLine() != null) {
-			br.readLine();
+		while (line != null) {
+			
 			String[] items = line.split(",");
 			int count = 0;
 			try {
@@ -70,6 +70,8 @@ public class ProductIO {
 				int itemQuantity = Integer.parseInt(items[2]);
 
 				vItems.add(new VendingDan(itemName, itemPrice, itemQuantity));
+				count++;
+				line = br.readLine();
 
 			} catch (Exception e) {
 				System.out.println("Bad item in file " + productFile + " on row " + (count + 1) + ".");

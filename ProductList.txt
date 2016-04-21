@@ -1,9 +1,9 @@
-1. Kamel's 'so easy' chews,1.00,10
-2. Damien's down under surprise,2.00,8
-3. Kim's 'hyped up' energy bar,3.00,7
-4. Grand Circus peanuts,1.00,11
-5. Aaron's Big Dawg Bar,3.00,7
-6. Broderick Tower Bites,4.00,14
-7. Greg's Honey Bun,1.00,13
-8. B'Nastee's Red Hat,1.00,1
-9. Bubble Gum,1.00,12
+Kamel's 'so easy' chews,1.00,10
+Damien's down under surprise,2.00,8
+Kim's 'hyped up' energy bar,3.00,7
+Grand Circus peanuts,1.00,11
+Aaron's Big Dawg Bar,3.00,7
+Broderick Tower Bites,4.00,14
+Greg's Honey Bun,1.00,13
+B'Nastee's Red Hat,1.00,1
+Bubble Gum,1.00,12

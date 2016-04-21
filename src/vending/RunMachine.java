@@ -13,6 +13,9 @@ public class RunMachine {
 		
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
+		ArrayList<VendingDan> list = ProductIO.readfromFile();
+	
+		
 		System.out.println("Welcome to the DNG Vending Machine! Here are the items for sale!");
 		String cont="y";
 		do{
@@ -51,6 +54,11 @@ public class RunMachine {
 		    	break;
 		    	
 		    }
+		if(input != 8){
+		System.out.println(list.get(input).getItem() + " costs $" + list.get(input).getPrice());
+			
+			
+		}
 		
 		System.out.println("Would you like to continue shopping? (y/n)");
 		cont = sc.next();

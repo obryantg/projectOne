@@ -11,12 +11,12 @@ public class VendingDan {
 		this.item = item;
 	}
 
-	public double getDesc() {
-		return desc;
+	public double getPrice() {
+		return price;
 	}
 
-	public void setDesc(double desc) {
-		this.desc = desc;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
 	public int getQty() {
@@ -28,12 +28,12 @@ public class VendingDan {
 	}
 
 	String item;
-	double desc;
+	double price;
 	int qty;
-	public VendingDan(String item, double desc, int qty) {
+	public VendingDan(String item, double price, int qty) {
 		super();
 		this.item = item;
-		this.desc = desc;
+		this.price = price;
 		this.qty = qty;
 	}
 	
