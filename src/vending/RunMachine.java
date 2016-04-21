@@ -33,7 +33,7 @@ public class RunMachine {
 		System.out.println("Would you like to learn more about these items(1) or purchase an item(2)");
 		int input = 0;
 		input = Validator.getValidInt1(1, 2);
-		String doll ="d";			
+					
 		switch (input)
 		{
 			case 1:			
@@ -77,7 +77,6 @@ public class RunMachine {
 		   cont = sc.next();
 		   
 		}
-		
 		while (cont.equalsIgnoreCase("y"));
 		
 		 
