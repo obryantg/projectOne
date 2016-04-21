@@ -51,14 +51,14 @@ public class RunMachine {
 		    	
 		    	break;
 		    	
-		    }System.out.println("Enter the number of the item you want to purchase!(0-8)");
-	    	input= sc.nextInt();
-	    	sc.nextLine();
+		    }System.out.println("Enter the number of the item you want to purchase!(0-8):");
+	    	input= Validator.getValidInt(0,8);
+	    	//sc.nextLine();
 		if(input != 7){
 		System.out.println(list.get(input).getItem() + " costs $" + list.get(input).getPrice());		
 			
 		}
-		else {System.out.println("Sorry you do not have sufficient funds, item is priceless");
+		else {System.out.println("Sorry you do not have sufficient funds! This item is priceless");
 		
 		}
 		//System.out.println("Insert dollar");
@@ -70,11 +70,11 @@ public class RunMachine {
 		  // double itemPrice = 0; // set price to see if calculations work
 		  // System.out.println ("You owe $" + df.format(itemPrice)+".");
 		   System.out.println ("This machine only accepts $1 bills. Enter payment amount:");
-		   double dollar = sc.nextDouble();
+		   double dollar = Validator.readValidDouble();
 		   double change = dollar - list.get(input).getPrice();
 		   System.out.println("Your change is: " + df.format(change)+ " cents");
-		   System.out.println("Would you like to continue shopping? (y/n)");
-		   cont = sc.next();
+		   //System.out.println("Would you like to continue shopping? (y/n)");
+		   cont = Validator.getString("Would you like to continue shopping? (y/n):");
 		   
 		}
 		while (cont.equalsIgnoreCase("y"));
