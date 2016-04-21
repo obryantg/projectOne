@@ -53,7 +53,7 @@ public static int readValidInt() {
 public static int getValidInt(int min, int max) {
 	int input = readValidInt();
 	while (input < min || input > max) {
-		System.out.print("Please pick a number within range (1-9)!");
+		System.out.print("Please pick a number within range (0-8)!");
 		input = readValidInt();
 	}
 	return input;
@@ -64,6 +64,24 @@ public static int getValidInt1(int min, int max) {
 	while (input < min || input > max) {
 		System.out.print("Please select option number '1' or '2': ");
 		input = readValidInt();
+	}
+	return input;
+}
+public static Double readValidDouble() {
+	while (!s.hasNextDouble()) {
+		s.nextLine();
+		System.out.print("Please make a valid selection! Enter a number: ");
+	}
+	double x = s.nextDouble();
+	s.nextLine();
+	return x;
+}
+// item selection 9 options
+public static Double getValidDouble(double min, double max) {
+	double input = readValidDouble();
+	while (input < min || input > max) {
+		System.out.print("Please pick a number within range (0-8)!");
+		input = readValidDouble();
 	}
 	return input;
 }
