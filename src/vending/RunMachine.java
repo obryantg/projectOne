@@ -43,8 +43,9 @@ public class RunMachine {
 				break;
 		
 		    case 2:
-		    	
-		    	
+		    	System.out.println("Enter the number of the item you want to purcahse!(1-9)");
+		    	input= sc.nextInt();
+		    	sc.nextLine();
 		    	break;
 		    	
 		    }
