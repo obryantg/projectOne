@@ -13,12 +13,14 @@ public class RunMachine {
 		
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
-		ArrayList<VendingDan> list = ProductIO.readfromFile();
-	
 		
+	
+		ArrayList<VendingDan> list;
+		list = ProductIO.readfromFile();
 		System.out.println("Welcome to the DNG Vending Machine! Here are the items for sale!");
 		String cont="y";
 		do{
+			 
 			System.out.println("Items:"
 					 + "\n1. Kamel's 'so easy' chews"
 					 + "\n2. Damien's down under suprise"
@@ -52,9 +54,9 @@ public class RunMachine {
 		    	break;
 		    	
 		    }System.out.println("Enter the number of the item you want to purchase!(0-8):");
-	    	input= Validator.getValidInt(0,8);
+	    	input= Validator.getValidInt(1,9) - 1;
 	    	//sc.nextLine();
-		if(input != 7){
+		if(input != 8){
 		System.out.println(list.get(input).getItem() + " costs $" + list.get(input).getPrice());		
 			
 		}
@@ -69,7 +71,9 @@ public class RunMachine {
 		   DecimalFormat df = new DecimalFormat("####0.00");
 		  // double itemPrice = 0; // set price to see if calculations work
 		  // System.out.println ("You owe $" + df.format(itemPrice)+".");
-		   System.out.println ("This machine only accepts $1 bills. Enter payment amount:");
+		   System.out.println ("Enter payment amount:");
+		   list.get(input).setQty(list.get(input).getQty()-1);
+		   //System.out.println(list.get(input).getQty());
 		   double dollar = Validator.readValidDouble();
 		   double change = dollar - list.get(input).getPrice();
 		   System.out.println("Your change is: " + df.format(change)+ " cents");
@@ -82,6 +86,7 @@ public class RunMachine {
 		 
 		
 		System.out.println("Bye Felicia!!!!!!!!!!!");
+		ProductIO.writeToFile(list);
 		sc.close();
 	}
 }

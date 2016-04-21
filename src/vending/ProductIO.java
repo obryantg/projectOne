@@ -12,19 +12,20 @@ import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class ProductIO {
 
-	public static void writeToFile() {
-		Scanner sc = new Scanner(System.in);
+	public static void writeToFile(ArrayList<VendingDan> list) {
+		
 
 		Path productList = Paths.get("ProductList.txt");
 		File productFile = productList.toFile();
 
 		try {
 			PrintWriter out = new PrintWriter(productFile);
-			out.println(productFile);
+			for(VendingDan d: list)
+			out.println(d.getItem()+","+d.getPrice()+","+d.getQty());
 			
 
 			out.close();
@@ -32,7 +33,7 @@ public class ProductIO {
 		} catch (IOException e) {
 
 			e.printStackTrace();
-			sc.close();
+			
 		}
 
 	}
