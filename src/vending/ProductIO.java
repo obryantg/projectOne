@@ -65,11 +65,11 @@ public class ProductIO {
 			String[] items = line.split(",");
 			int count = 0;
 			try {
-				String itemDesc = items[0];
+				String itemName = items[0];
 				double itemPrice = Double.parseDouble(items[1]);
 				int itemQuantity = Integer.parseInt(items[2]);
 
-				vItems.add(new VendingDan(itemDesc, itemPrice, itemQuantity));
+				vItems.add(new VendingDan(itemName, itemPrice, itemQuantity));
 
 			} catch (Exception e) {
 				System.out.println("Bad item in file " + productFile + " on row " + (count + 1) + ".");
