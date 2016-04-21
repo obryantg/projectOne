@@ -1,10 +1,10 @@
 Product List: 
-1. Kamel's 'so easy' chews
-2. Damien's down under suprise
-3. Kim's 'hyped up' energy bar
-4. Grand Circus peanuts
-5. Aaron's Big Dawg Bar
-6. Broderick Tower Bites
-7. Greg's Honey Bun
-8. B'Nastee's Red Hat
-9. Bubble Gum
+1. Kamel's 'so easy' chews, 1.00, 10
+2. Damien's down under suprise, 2.00, 8
+3. Kim's 'hyped up' energy bar, 3.00, 7
+4. Grand Circus peanuts, 1.00, 11
+5. Aaron's Big Dawg Bar, 3.00, 7
+6. Broderick Tower Bites, 4.00, 14
+7. Greg's Honey Bun, 13
+8. B'Nastee's Red Hat, 1.00, 1
+9. Bubble Gum, 1.00, 12
