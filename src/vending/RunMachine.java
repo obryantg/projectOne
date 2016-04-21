@@ -48,12 +48,12 @@ public class RunMachine {
 				
 		
 		    case 2:
-		    	System.out.println("Enter the number of the item you want to purchase!(0-8)");
-		    	input= sc.nextInt();
-		    	sc.nextLine();
+		    	
 		    	break;
 		    	
-		    }
+		    }System.out.println("Enter the number of the item you want to purchase!(0-8)");
+	    	input= sc.nextInt();
+	    	sc.nextLine();
 		if(input != 7){
 		System.out.println(list.get(input).getItem() + " costs $" + list.get(input).getPrice());		
 			
