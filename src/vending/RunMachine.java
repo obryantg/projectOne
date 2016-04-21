@@ -1,4 +1,6 @@
 package vending;
+import java.text.DecimalFormat;
+import java.util.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -61,6 +63,20 @@ public class RunMachine {
 	}
 }
 	
+/*   CALCULATE CHANGE
+DecimalFormat df = new DecimalFormat("####0.00");
+double itemPrice = .95; // set price to see if calculations work
+System.out.println ("You owe $" + df.format(itemPrice)+".");
+System.out.println ("This machine only accepts $1 bills. Enter payment amount:");
+double dollar = sc.nextDouble();
+double change = dollar - itemPrice;
+System.out.println("Your change is: " + df.format(change)+ " cents");
+
+
+*/
+
+
+
 	/*private static char[] PrintWriter(String string) {
 		// TODO Auto-generated method stub
 		return null;
