@@ -45,7 +45,7 @@ public class RunMachine {
 		
 		while (cont.equalsIgnoreCase("y"));
 		
-		
+		System.out.println("Bye Felicia!!!!!!!!!!!");
 		sc.close();
 	}
 }
