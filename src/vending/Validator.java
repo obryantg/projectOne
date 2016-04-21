@@ -53,7 +53,7 @@ public static int readValidInt() {
 public static int getValidInt(int min, int max) {
 	int input = readValidInt();
 	while (input < min || input > max) {
-		System.out.print("Please put a number within range! (1-9): ");
+		System.out.print("Please pick a number within range (1-9)!");
 		input = readValidInt();
 	}
 	return input;
