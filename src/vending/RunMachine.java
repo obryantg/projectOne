@@ -33,7 +33,7 @@ public class RunMachine {
 		System.out.println("Would you like to learn more about these items(1) or purchase an item(2)");
 		int input = 0;
 		input = Validator.getValidInt1(1, 2);
-					
+		String doll ="d";			
 		switch (input)
 		{
 			case 1:			
@@ -48,40 +48,49 @@ public class RunMachine {
 				break;
 		
 		    case 2:
-		    	System.out.println("Enter the number of the item you want to purcahse!(1-9)");
+		    	System.out.println("Enter the number of the item you want to purcahse!(0-8)");
 		    	input= sc.nextInt();
 		    	sc.nextLine();
 		    	break;
 		    	
 		    }
-		if(input != 8){
-		System.out.println(list.get(input).getItem() + " costs $" + list.get(input).getPrice());
-			
+		if(input != 7){
+		System.out.println(list.get(input).getItem() + " costs $" + list.get(input).getPrice());		
 			
 		}
+		else {System.out.println("Sorry you do not have sufficient funds, item is priceless");
 		
-		System.out.println("Would you like to continue shopping? (y/n)");
-		cont = sc.next();
+		}
+		//System.out.println("Insert dollar");
+		//doll=sc.next();
+		
+		
+		 // CALCULATE CHANGE
+		   DecimalFormat df = new DecimalFormat("####0.00");
+		  // double itemPrice = 0; // set price to see if calculations work
+		  // System.out.println ("You owe $" + df.format(itemPrice)+".");
+		   System.out.println ("This machine only accepts $1 bills. Enter payment amount:");
+		   double dollar = sc.nextDouble();
+		   double change = dollar - list.get(input).getPrice();
+		   System.out.println("Your change is: " + df.format(change)+ " cents");
+		   System.out.println("Would you like to continue shopping? (y/n)");
+		   cont = sc.next();
+		   
 		}
 		
 		while (cont.equalsIgnoreCase("y"));
+		
+		 
 		
 		System.out.println("Bye Felicia!!!!!!!!!!!");
 		sc.close();
 	}
 }
 	
-/*   CALCULATE CHANGE
-DecimalFormat df = new DecimalFormat("####0.00");
-double itemPrice = .95; // set price to see if calculations work
-System.out.println ("You owe $" + df.format(itemPrice)+".");
-System.out.println ("This machine only accepts $1 bills. Enter payment amount:");
-double dollar = sc.nextDouble();
-double change = dollar - itemPrice;
-System.out.println("Your change is: " + df.format(change)+ " cents");
 
 
-*/
+
+
 
 
 
