@@ -16,7 +16,7 @@ public class RunMachine {
 		System.out.println("Would you like to learn more about these items(1) or purchase an item(2)");
 		int input = 0;
 		input = Validator.getValidInt1(1, 2);
-		sc.nextLine();
+		
 		
 		switch (input)
 		{
@@ -25,10 +25,11 @@ public class RunMachine {
 					   String line = null;
 					   while ((line = br.readLine()) != null) {
 					       System.out.println(line);
+					       
 					   }
-					}
+					}				
 				break;
-		
+				
 		    case 2:
 		    	
 		    	
@@ -36,8 +37,8 @@ public class RunMachine {
 		    	
 		    }
 		
-		
-		
+		//sc.nextLine();
+		//sc.nextLine();
 		sc.close();
 	}
 
