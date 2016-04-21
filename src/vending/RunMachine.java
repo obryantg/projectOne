@@ -14,6 +14,16 @@ public class RunMachine {
 		System.out.println("Welcome to the DNG Vending Machine! Here are the items for sale!");
 		String cont="y";
 		do{
+			System.out.println("Items:"
+					 + "\n1. Kamel's 'so easy' chews"
+					 + "\n2. Damien's down under suprise"
+					 + "\n3. Kim's 'hyped up' energy bar"
+					 + "\n4. Grand Circus peanuts"
+					 + "\n5. Aaron's Big Dawg Bar"
+					 + "\n6. Broderick Tower Bites"
+					 + "\n7. Greg's Honey Bun"
+					 + "\n8. B'Nastee's Red Hat"
+					 + "\n9. Bubble Gum");
 		ProductIO.readfromFile();
 		System.out.println("Would you like to learn more about these items(1) or purchase an item(2)");
 		int input = 0;

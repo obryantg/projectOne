@@ -24,7 +24,7 @@ public class ProductIO {
 
 		try {
 			PrintWriter out = new PrintWriter(productFile);
-			// out.println("Product List: "
+			out.println(productFile);
 			// + "\n1. Kamel's 'so easy' chews"
 			// + "\n2. Damien's down under suprise"
 			// + "\n3. Kim's 'hyped up' energy bar"
@@ -34,11 +34,11 @@ public class ProductIO {
 			// + "\n7. Greg's Honey Bun"
 			// + "\n8. B'Nastee's Red Hat"
 			// + "\n9. Bubble Gum");
-			// try {
-			// FileWriter out = new FileWriter(productFile,true);
-			// System.out.print("Item List: ");
+			//try {
+			//FileWriter out = new FileWriter(productFile,true);
+			//System.out.print("Item List: ");
 			// input = sc.nextLine();
-			// out.append(input + "\n");
+			//out.append(input + "\n");
 			// System.out.println("Entry Saved");
 
 			out.close();
@@ -80,11 +80,12 @@ public class ProductIO {
 				// System.out.println(line);
 				// line = br.readLine(); //read another line
 			}
-			br.close();
+			
 		}
 		// catch (IOException e)
 		// {
 		// System.out.println(e);
+		br.close();
 return vItems;
 	}
 }
